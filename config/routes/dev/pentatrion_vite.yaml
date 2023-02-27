@@ -1,0 +1,3 @@
+_pentatrion_vite:
+    prefix: /dist
+    resource: "@PentatrionViteBundle/Resources/config/routing.yaml"

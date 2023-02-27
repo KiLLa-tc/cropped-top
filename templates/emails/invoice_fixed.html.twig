@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<container>
+    <row>
+    申請を受け付けました。
+    </row>
+</container>
+<container>
+    {{invoice.title}}
+    <container>
+        <row><columns>申請先</columns><columns>{{invoice.agent.name}}</columns></row>
+        <row><columns>件名</columns><columns>{{invoice.title}}</columns></row>
+        <row><columns>注文日</columns><columns>{{invoice.publishedAt}}</columns></row>
+    </container>
+    詳細
+    <container>
+    {% for detail in invoice.orderDetails %}
+        <row><columns>{{detail.merch}}</columns><columns>{{detail.price}}</columns><columns>{{detail.amount}}</columns></row>
+    {% endfor %}
+    </container>
+    <container>
+        <row><columns><a href="{{app.request.server.get('APP_BASE')}}/invoices/{{invoice.id}}">サイトで確認する</a></columns></row>
+    </container>
+{% endblock %}

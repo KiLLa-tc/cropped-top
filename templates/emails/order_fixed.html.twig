@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<container>
+    <row>
+    注文を受け付けました。
+    </row>
+</container>
+<container>
+    {{order.title}}
+    <container>
+        <row><columns>注文元</columns><columns>{{order.agent.name}}</columns></row>
+        <row><columns>件名</columns><columns>{{ordered.title}}</columns></row>
+        <row><columns>注文日</columns><columns>{{ordered.ordered}}</columns></row>
+    </container>
+    詳細
+    <container>
+    {% for detail in order.orderDetails %}
+        <row><columns>{{detail.merch}}</columns><columns>{{detail.price}}</columns><columns>{{detail.amount}}</columns></row>
+    {% endfor %}
+    </container>
+    <container>
+        <row><columns><a href="">サイトで確認する</a></columns></row>
+    </container>
+{% endblock %}

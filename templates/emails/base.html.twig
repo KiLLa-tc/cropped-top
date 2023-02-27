@@ -1,0 +1,17 @@
+{% apply inky_to_html %}
+    <container>
+        <row class="header">
+            <columns>
+                <spacer size="16"></spacer>
+                <h1 class="text-center">{{}}</h1>
+            </columns>
+        </row>
+        <row>
+            <columns>
+            {% block body %}
+                <div id="root"></div>
+            {% endblock %}
+            </columns>
+        </row>
+    </container>
+{% endapply %}

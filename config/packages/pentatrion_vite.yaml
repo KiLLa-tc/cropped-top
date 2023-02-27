@@ -1,0 +1,29 @@
+# pentatrion_vite:
+#     # path to the web root relative to the Symfony project root directory
+#     public_dir: /public
+
+#     # Base public path when served in development or production
+#     base: /build/
+
+#     script_attributes:
+#         # you can define your attributes that you want to apply
+#         # for all your script tags
+
+#     link_attributes:
+#         # you can define your attributes that you want to apply
+#         # for all your link tags
+
+
+# pentatrion_vite:
+#     # Base public path when served in development or production
+#     base: /dist/
+#     # path to the web root relative to the Symfony project root directory
+#     public_dir: /assets
+
+#     script_attributes:
+#         # you can define your attributes that you want to apply
+#         # for all your script tags
+
+#     link_attributes:
+#         # you can define your attributes that you want to apply
+#         # for all your link tags

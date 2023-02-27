@@ -1,0 +1,10 @@
+api_platform:
+    mercure:
+        # Enabled by default with installed symfony/mercure-bundle.
+        enabled: false
+    swagger:
+        api_keys:
+            JWT:
+                name: Authorization
+                type: header
+                

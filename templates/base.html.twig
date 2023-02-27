@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} 販売管理システム {% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ vite_entry_link_tags('main') }}
+            {# <link rel="stylesheet" href="/assets/main.e3b0c442.css"></link> #}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+            {# <script type="module" crossorigin src="/assets/index.cd334e84.js"></script> #}
+            {{ vite_entry_script_tags('app', {
+                dependency: 'react',
+                attr: {
+                    referrerpolicy: "origin"
+                }
+            }) 
+            }}
+        {% endblock %}
+    </body>
+</html>
